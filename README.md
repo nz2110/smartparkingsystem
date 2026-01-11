@@ -105,12 +105,12 @@ create table system_status (
 insert into system_status (id, gate_status) values (1, 'CLOSED');
 
 3. **Install Frontend Dependencies**
-```sh
+    ```sh
 cd frontend
 npm install
   
 
 4. **Install Python Requirements**
-```sh
+    ```sh
 cd iot-script
 pip install opencv-python easyocr requests supabase numpy
