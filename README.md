@@ -83,7 +83,9 @@ Ensure you have the following installed on your machine:
 
 1. **Clone the repo**
    ```sh
-   git clone [https://github.com/github_username/repo_name.git](https://github.com/github_username/repo_name.git)
+   1. **Clone the repo**
+   ```bash
+   git clone [https://github.com/nz2110/smartparkingsystem.git](https://github.com/nz2110/smartparkingsystem.git)
 
 2. **Setup the Database (Supabase) Create a new project in Supabase and run the SQL editor to create necessary tables:**
   ```sh
