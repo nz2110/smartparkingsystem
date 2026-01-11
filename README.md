@@ -118,3 +118,13 @@ insert into system_status (id, gate_status) values (1, 'CLOSED');
   cd iot-script
   pip install opencv-python easyocr requests supabase numpy
 ```
+5. **Configure API Keys**
+
+Update frontend/src/supabaseClient.js with your Supabase URL and Anon Key.
+
+Update iot-script/main.py with your Supabase details and ESP32 IP address.
+
+6. **Usage and Features**
+Start the Frontend: npm start (Runs on localhost:3000).
+
+Start the AI Logic: python main.py.

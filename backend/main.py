@@ -10,7 +10,7 @@ from supabase import create_client, Client
 # ===========================
 # 1. SETTINGS
 # ===========================
-ESP32_IP = "192.168.209.179" 
+ESP32_IP = "192.168.124.179" 
 SUPABASE_URL = "https://hesedvhknyjcveycxdgh.supabase.co"
 SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imhlc2VkdmhrbnlqY3ZleWN4ZGdoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjM5NjAwMjAsImV4cCI6MjA3OTUzNjAyMH0.Iz3f0JBDaGohHAAaaAeoK_k7iHo3B5kCr6GihTWQ4Es"
 
