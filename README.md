@@ -1,69 +1,113 @@
-# 🚗 IoT Smart Parking System
+<br />
+<div align="center">
+  <a href="https://github.com/github_username/repo_name">
+    <img src="assets/banner-placeholder.png" alt="Project Banner" width="700" height="200">
+  </a>
 
-> **Real-time parking management system integrated with AI-based License Plate Recognition (LPR) and Cloud Connectivity.**
+  <h3 align="center">IoT Smart Parking System</h3>
 
-![React](https://img.shields.io/badge/Frontend-React.js-61DAFB?style=for-the-badge&logo=react)
-![Python](https://img.shields.io/badge/AI_Logic-Python-3776AB?style=for-the-badge&logo=python)
-![Supabase](https://img.shields.io/badge/Database-Supabase-3ECF8E?style=for-the-badge&logo=supabase)
-![ESP32](https://img.shields.io/badge/Hardware-ESP32-000000?style=for-the-badge&logo=espressif)
+  <p align="center">
+    A real-time parking management system integrated with AI-based License Plate Recognition (LPR) and Cloud Connectivity.
+    <br />
+    <a href="#about-the-project"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+  </p>
+</div>
 
-## 📖 Project Overview
-This project is an **IoT-based Contactless Parking System** designed to automate vehicle entry and monitor parking slot availability in real-time. It uses an **ESP32** (or camera-connected setup) to detect vehicles, **EasyOCR** for license plate recognition, and **Supabase** for real-time cloud data storage.
+<div align="center">
 
-The user interface is a modern, **Dark/Neon React Dashboard** that displays live status updates, vehicle logs, and gate control states.
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
 
-## ✨ Key Features
-* **🤖 AI License Plate Recognition:** Automatically detects and reads vehicle number plates using EasyOCR.
-* **📡 Real-Time Monitoring:** Live updates of parking slot availability (Occupied/Available) on the dashboard.
-* **🚧 Smart Gate Control:** Simulates automated gate opening/closing based on valid vehicle detection.
-* **☁️ Cloud Integration:** All entry/exit logs are stored instantly in Supabase.
-* **📊 Interactive Dashboard:** A responsive React web app with a cyber-aesthetic UI to view live statistics and logs.
+</div>
 
-## 🛠️ Tech Stack
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage-and-features">Usage and Features</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
 
-### Hardware
-* **ESP32 / Camera Module:** For capturing vehicle images.
-* **Ultrasonic Sensor (HC-SR04):** For detecting vehicle distance/presence.
-* **Servo Motor:** For simulating the entry gate.
+## About The Project
 
-### Software
-* **Frontend:** React.js, CSS3 (Custom Dark/Neon Theme).
-* **Backend/Database:** Supabase (PostgreSQL).
-* **IoT Logic:** Python (OpenCV, EasyOCR, Requests).
+[![Product Name Screen Shot][product-screenshot]](assets/dashboard.png)
 
-## ⚙️ Installation & Setup
+This project is an **IoT-based Contactless Parking System** designed to automate vehicle entry and monitor parking slot availability in real-time. It addresses the need for modern, efficient parking solutions in urban areas.
 
-### 1. Database Setup (Supabase)
-Create a new project in Supabase and run the following SQL to create the necessary tables:
+The system uses an **ESP32** micro-controller (or a camera-connected equivalent) to detect vehicles approaching the gate. It utilizes **EasyOCR** for automatic license plate recognition (ALPR) and **Supabase** for instantly storing entry/exit logs in the cloud. The user interface is a modern, responsive React web application with a cyber-aesthetic UI that displays live status updates and vehicle logs.
 
-```sql
--- Table for parking logs
+### Built With
+
+This project leverages the following technologies:
+
+* [![React][React.js]][React-url]
+* [![Python][Python]][Python-url]
+* [![Supabase][Supabase]][Supabase-url]
+* [![ESP32][ESP32]][ESP32-url]
+* [![OpenCV][OpenCV]][OpenCV-url]
+
+## Getting Started
+
+To get a local copy up and running, follow these simple steps.
+
+### Prerequisites
+
+Ensure you have the following installed on your machine:
+* Node.js & npm (for the Frontend)
+* Python 3.x & pip (for the AI/IoT logic)
+
+### Installation
+
+1. **Clone the repo**
+   ```sh
+   git clone [https://github.com/github_username/repo_name.git](https://github.com/github_username/repo_name.git)
+
+2. **Setup the Database (Supabase) Create a new project in Supabase and run the SQL editor to create necessary tables:**
+    -- Table for parking logs
 create table parking_slots (
   id bigint generated by default as identity primary key,
   plate text,
   slot text,
-  status text, -- 'Entered' or 'Exited'
+  status text,
   time timestamp with time zone default timezone('utc'::text, now())
 );
 
 -- Table for system status (Gate)
 create table system_status (
   id bigint primary key,
-  gate_status text -- 'OPEN' or 'CLOSED'
+  gate_status text
 );
+-- Insert initial gate status
+insert into system_status (id, gate_status) values (1, 'CLOSED');
 
-2. Frontend (React Dashboard)
-Navigate to the frontend folder and install dependencies:
+3. **Install Frontend Dependencies**
+    cd frontend
+    npm install
 
-cd frontend
-npm install
-npm start
+4. **Install Python Requirements**
 
-
-3. IoT System (Python Script)
-Ensure you have Python installed, then install the required libraries:
-pip install opencv-python easyocr requests supabase numpy
-
-Run the main control script:
-
-python main.py
+  cd iot-script
+  pip install opencv-python easyocr requests supabase numpy
