@@ -1,0 +1,206 @@
+:root {
+  --bg: #050505;
+  --card-bg: #0a0a0a;
+  --text-main: #e0e0e0;
+  --text-muted: #888;
+  
+  /* Neon Colors */
+  --neon-green: #2ecc71;
+  --neon-green-glow: rgba(46, 204, 113, 0.4);
+  --neon-red: #e74c3c;
+  --neon-red-glow: rgba(231, 76, 60, 0.4);
+  --neon-blue: #00d2d3;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text-main);
+  min-height: 100vh;
+}
+
+/* --- Header --- */
+.app-header {
+  background: transparent;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #222;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--neon-blue); /* Cyan color from image */
+  text-shadow: 0 0 10px rgba(0, 210, 211, 0.3);
+  margin-bottom: 5px;
+}
+
+.brand-sub {
+  font-size: 14px;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+.gate-status-box {
+  text-align: right;
+}
+
+.gate-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.gate-value {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--neon-red);
+  text-transform: uppercase;
+  text-shadow: 0 0 10px var(--neon-red-glow);
+}
+
+/* --- Dashboard Container --- */
+.dashboard-root {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* --- Stats Row (Available vs Occupied) --- */
+.stats-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.stat-card {
+  flex: 1;
+  background: #111;
+  padding: 30px;
+  border-radius: 20px;
+  /* subtle gradient or border */
+  border: 1px solid #222;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-title {
+  font-size: 18px;
+  color: #ccc;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.stat-value {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.stat-sub {
+  font-size: 12px;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Green Stats */
+.stat-card.green .stat-value {
+  color: var(--neon-green);
+  text-shadow: 0 0 20px var(--neon-green-glow);
+}
+
+/* Red Stats */
+.stat-card.red .stat-value {
+  color: var(--neon-red);
+  text-shadow: 0 0 20px var(--neon-red-glow);
+}
+
+/* --- Parking Layout Section --- */
+.layout-section {
+  margin-top: 40px;
+}
+
+.layout-header {
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.slots-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 slots in a row like image */
+  gap: 20px;
+}
+
+/* --- Slot Card Styling --- */
+.slot-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 25px 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  border: 2px solid transparent;
+}
+
+.slot-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.slot-status {
+  font-size: 14px;
+}
+
+/* Available Slot */
+.slot-card.available {
+  border-color: var(--neon-green);
+  box-shadow: 0 0 15px var(--neon-green-glow), inset 0 0 10px var(--neon-green-glow);
+}
+.slot-card.available .slot-status {
+  color: var(--neon-green);
+}
+
+/* Occupied Slot */
+.slot-card.occupied {
+  border-color: var(--neon-red);
+  box-shadow: 0 0 15px var(--neon-red-glow), inset 0 0 10px var(--neon-red-glow);
+}
+.slot-card.occupied .slot-status {
+  color: var(--neon-red);
+}
+
+/* --- Admin Button (Hidden/Subtle) --- */
+.btn-admin-login {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0.3;
+  background: none;
+  border: 1px solid #444;
+  color: #666;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.btn-admin-login:hover {
+  opacity: 1;
+  color: #fff;
+  border-color: #fff;
+}
