@@ -1,11 +1,8 @@
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](assets/dashboard.png)
+This project is an **Smart Parking System** designed to automate vehicle entry and monitor parking slot availability in real-time. It addresses the need for modern, efficient parking solutions in urban areas.
 
-This project is an **IoT-based Contactless Parking System** designed to automate vehicle entry and monitor parking slot availability in real-time. It addresses the need for modern, efficient parking solutions in urban areas.
-
-The system uses an **ESP32** micro-controller (or a camera-connected equivalent) to detect vehicles approaching the gate. It utilizes **EasyOCR** for automatic license plate recognition (ALPR) and **Supabase** for instantly storing entry/exit logs in the cloud. The user interface is a modern, responsive React web application with a cyber-aesthetic UI that displays live status updates and vehicle logs.
-
+The system uses an **ESP32** micro-controller  to detect vehicles approaching the gate. It utilizes **EasyOCR** for automatic license plate recognition (ALPR) and **Supabase** for instantly storing entry/exit logs in the cloud. The user interface is a modern, responsive React web application with a cyber-aesthetic UI that displays live status updates and vehicle logs.
 
 
 ## Getting Started
