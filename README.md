@@ -1,56 +1,3 @@
-<br />
-<div align="center">
-  <a href="https://github.com/github_username/repo_name">
-    <img src="assets/banner-placeholder.png" alt="Project Banner" width="700" height="200">
-  </a>
-
-  <h3 align="center">IoT Smart Parking System</h3>
-
-  <p align="center">
-    A real-time parking management system integrated with AI-based License Plate Recognition (LPR) and Cloud Connectivity.
-    <br />
-    <a href="#about-the-project"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
-  </p>
-</div>
-
-<div align="center">
-
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-
-</div>
-
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage-and-features">Usage and Features</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ol>
-</details>
-
 ## About The Project
 
 [![Product Name Screen Shot][product-screenshot]](assets/dashboard.png)
@@ -59,15 +6,7 @@ This project is an **IoT-based Contactless Parking System** designed to automate
 
 The system uses an **ESP32** micro-controller (or a camera-connected equivalent) to detect vehicles approaching the gate. It utilizes **EasyOCR** for automatic license plate recognition (ALPR) and **Supabase** for instantly storing entry/exit logs in the cloud. The user interface is a modern, responsive React web application with a cyber-aesthetic UI that displays live status updates and vehicle logs.
 
-### Built With
 
-This project leverages the following technologies:
-
-* [![React][React.js]][React-url]
-* [![Python][Python]][Python-url]
-* [![Supabase][Supabase]][Supabase-url]
-* [![ESP32][ESP32]][ESP32-url]
-* [![OpenCV][OpenCV]][OpenCV-url]
 
 ## Getting Started
 
@@ -109,13 +48,13 @@ insert into system_status (id, gate_status) values (1, 'CLOSED');
 
 3. **Install Frontend Dependencies**
 ```sh
-  cd frontend
+  cd frontend/smart-parking-dahsboard
   npm install
 ```
 
 4. **Install Python Requirements**
 ```sh
-  cd iot-script
+  cd backend
   pip install opencv-python easyocr requests supabase numpy
 ```
 
