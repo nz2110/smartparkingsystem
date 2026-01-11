@@ -118,13 +118,24 @@ insert into system_status (id, gate_status) values (1, 'CLOSED');
   cd iot-script
   pip install opencv-python easyocr requests supabase numpy
 ```
+
 5. **Configure API Keys**
+   * Open `frontend/src/supabaseClient.js` and enter your Supabase URL & Anon Key.
+   * Open `backend/main.py` and enter your Supabase details and the ESP32 IP Address.
 
-Update frontend/src/supabaseClient.js with your Supabase URL and Anon Key.
 
-Update iot-script/main.py with your Supabase details and ESP32 IP address.
+## Usage and Features
 
-6. **Usage and Features**
-Start the Frontend: npm start (Runs on localhost:3000).
+Once installed, follow these steps to run the system:
 
-Start the AI Logic: python main.py.
+1. **Start the Frontend Dashboard**
+   ```bash
+   cd frontend/smart-parking-dashboard
+   npm start
+
+2. **Start AI Logic**
+  ```bash
+   cd backend
+   python main.py
+
+
