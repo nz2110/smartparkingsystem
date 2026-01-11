@@ -106,8 +106,8 @@ insert into system_status (id, gate_status) values (1, 'CLOSED');```
 
 3. **Install Frontend Dependencies**
 ```sh
-cd frontend
-npm install
+  cd frontend
+  npm install
 ```
 
 4. **Install Python Requirements**
